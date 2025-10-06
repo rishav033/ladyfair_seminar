@@ -1,0 +1,474 @@
+  /* Modal container */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Modal content box */
+  .modal-content {
+    background: #ffffff;
+    color: #333;
+    border-radius: 12px;
+    margin: 10% auto;
+    padding: 30px 25px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.4s ease-out;
+  }
+
+  /* Modal close (X) button */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .close-btn:hover {
+    color: #333;
+  }
+
+  /* Headline */
+  .modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2e8b57;
+  }
+
+  /* Paragraphs */
+  .modal-content p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  /* Buttons */
+  .modal-content button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2e8b57;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .modal-content button:hover {
+    background-color: #256b45;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+/* ==============================
+   Continuous One-Line Banner
+============================== */
+.limited-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: #ff3370;
+    z-index: 9999;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.limited-banner .scroll-text {
+    display: inline-block;
+    padding: 12px 50px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    animation: scrollLine 12s linear infinite;
+}
+
+/* Continuous sliding effect */
+@keyframes scrollLine {
+    100% {
+        transform: translateX(100%); /* start off screen right */
+    }
+    100% {
+        transform: translateX(-100%); /* move off screen left */
+    }
+}
+
+/* ==============================
+   General Body & Typography
+============================== */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.7;
+    color: #444;
+    background-color: #fcfcfc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #fff;
+    line-height: 1.2;
+}
+
+h2.section-title {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+h2.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #ff3370;
+    border-radius: 2px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+}
+
+p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #ff3370;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e62d63;
+    text-decoration: underline;
+}
+
+/* ==============================
+   Buttons
+============================== */
+.btn {
+    display: inline-block;
+    background-color: #ff3370;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 51, 112, 0.3);
+}
+
+.btn:hover {
+    background-color: #e62d63;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 51, 112, 0.4);
+}
+
+.btn-block { width: 100%; text-align: center; }
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.bg-light-pink { background-color: #fff5f8; }
+
+.icon-pink { color: #ff3370; margin-right: 10px; }
+.icon-large { font-size: 3em; color: #ff3370; margin-bottom: 15px; }
+
+/* ==============================
+   Hero Section
+============================== */
+.hero-section {
+    background: url('https://via.placeholder.com/1920x800/ffccdd/800000?text=Ladyfair+Glamour') no-repeat center center/cover;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 50px 0;
+}
+.hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+    z-index: 0;
+}
+.hero-content { position: relative; z-index: 1; max-width: 900px; }
+.hero-logo { max-width: 180px; margin-bottom: 30px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3)); }
+.hero-section h1 { font-size: 4.5em; margin-bottom: 20px; text-shadow: 0 3px 6px rgba(0,0,0,0.4); }
+.hero-section .tagline { font-size: 1.4em; margin-bottom: 40px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+
+/* ==============================
+   Intro Section
+============================== */
+.intro-section { text-align: center; }
+.intro-text { max-width: 800px; margin: 0 auto 50px; font-size: 1.2em; line-height: 1.8; }
+.intro-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 50px; }
+.intro-item {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+.intro-item:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+.intro-item img { width: 100%; height: 250px; object-fit: cover; }
+.intro-item h3 { margin: 25px 25px 15px; font-size: 1.6em; color: #ff3370; }
+.intro-item p { padding: 0 25px 25px; color: #666; }
+
+.seminar-details {
+    margin-top: 40px;
+    background-color: #f0f8ff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: inline-block;
+    text-align: left;
+}
+.seminar-details p { font-size: 1.1em; font-weight: 500; color: #555; margin-bottom: 10px; }
+.seminar-details p:last-child { margin-bottom: 0; }
+
+/* ==============================
+   Benefits Section
+============================== */
+.benefits-section { text-align: center; }
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.benefit-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.benefit-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
+.benefit-card h3 { font-size: 1.4em; margin-bottom: 10px; color: #ff3370; }
+.benefit-card p { font-size: 0.95em; color: #666; }
+.footnote { margin-top: 40px; font-size: 0.9em; color: #888; }
+
+/* ==============================
+   Career Opportunities
+============================== */
+.career-opportunity { background-color: #fff; }
+.opportunity-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; margin-top: 40px; }
+.opportunity-item {
+    background-color: #fdfdfd;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 48%;
+    min-width: 300px;
+    transition: transform 0.2s ease;
+}
+.opportunity-item:hover { transform: translateY(-3px); }
+.opportunity-item i { font-size: 1.8em; margin-right: 15px; flex-shrink: 0; color: #ff3370; }
+.opportunity-item p { margin: 0; font-weight: 500; color: #555; }
+
+/* ==============================
+   Registration Section
+============================== */
+.registration-section {
+    background: linear-gradient(135deg, #fcefee 0%, #fff0f5 100%);
+    color: #333;
+}
+.registration-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+.how-to-register, .registration-form-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+}
+.how-to-register { max-width: 550px; }
+.how-to-register h3 { text-align: center; margin-bottom: 30px; color: #ff3370; }
+.how-to-register ul { list-style: none; padding: 0; }
+.how-to-register li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #555;
+}
+.how-to-register li i { font-size: 1.5em; color: #ff3370; margin-right: 15px; width: 30px; text-align: center; }
+.registration-form-card { max-width: 450px; text-align: center; }
+.registration-form-card h3 { font-size: 2.2em; margin-bottom: 15px; }
+.price-info { font-size: 1.2em; margin-bottom: 30px; color: #666; }
+.price-info del { color: #999; }
+.highlight-price { color: #00a87a; font-weight: 700; font-size: 1.1em; }
+
+.form-group { margin-bottom: 25px; text-align: left; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 0.95em; }
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: calc(100% - 24px);
+    padding: 14px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.05em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus {
+    border-color: #ff3370;
+    box-shadow: 0 0 0 3px rgba(255, 51, 112, 0.2);
+    outline: none;
+}
+.form-group small { display: block; margin-top: 8px; color: #888; font-size: 0.85em; }
+.checkbox-group { display: flex; align-items: flex-start; margin-bottom: 35px; }
+.checkbox-group input[type="checkbox"] { margin-top: 3px; margin-right: 10px; transform: scale(1.1); }
+.checkbox-group label { font-size: 0.9em; font-weight: 400; line-height: 1.4; }
+.payment-assurance { margin-top: 25px; font-size: 0.9em; color: #777; }
+
+/* ==============================
+   Confirmation Message
+============================== */
+.confirmation-message {
+    text-align: center;
+    padding: 40px;
+    background-color: #e6ffe6;
+    border: 1px solid #aaffaa;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0 5px 20px rgba(0,150,0,0.1);
+}
+.confirmation-message .success-icon { color: #28a745; font-size: 4em; margin-bottom: 20px; }
+.confirmation-message h3 { font-size: 2.5em; margin-bottom: 15px; }
+.confirmation-message p { font-size: 1.1em; line-height: 1.6; margin-bottom: 15px; }
+.epass-preview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.final-note { margin-top: 30px; font-size: 0.9em; color: #888; }
+
+/* ==============================
+   Footer
+============================== */
+footer {
+    background-color: #222;
+    color: #eee;
+    padding: 60px 0 30px;
+    font-size: 0.9em;
+}
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
+.footer-col h4 { font-size: 1.3em; margin-bottom: 20px; color: #ff3370; }
+.footer-col a { color: #bbb; transition: 0.3s; }
+.footer-col a:hover { color: #ff3370; }
+.social-icons a { color: #bbb; font-size: 1.6em; margin-right: 20px; transition: 0.3s; }
+.social-icons a:hover { color: #ff3370; transform: translateY(-3px); }
+copyright { text-align: center; border-top: 1px solid #444; padding-top: 30px; color: #aaa; }
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 992px) {
+    .hero-section h1 { font-size: 3.2em; }
+    .how-to-register, .registration-form-card, .confirmation-message { max-width: 90%; }
+    .opportunity-item { max-width: 80%; }
+}
+@media (max-width: 768px) {
+    .hero-section { min-height: 550px; padding: 40px 0; }
+    .hero-section h1 { font-size: 2.5em; }
+    .hero-section .tagline { font-size: 1em; }
+    h2.section-title { font-size: 1.6em; margin-bottom: 40px; }
+    .intro-grid { flex-direction: column; align-items: center; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .opportunity-item { max-width: 100%; }
+    .registration-flex { flex-direction: column; align-items: center; }
+    .how-to-register, .registration-form-card { max-width: 85%; }
+    .confirmation-message h3 { font-size: 1.8em; }
+    .confirmation-message p { font-size: 1em; }
+}
+@media (max-width: 480px) {
+    .hero-section h1 { font-size: 2em; }
+    .hero-section .tagline { font-size: 0.9em; }
+    .hero-logo { max-width: 120px; }
+    .btn { padding: 12px 25px; font-size: 1em; }
+    .confirmation-message .success-icon { font-size: 3em; }
+    .confirmation-message h3 { font-size: 1.5em; }
+}
